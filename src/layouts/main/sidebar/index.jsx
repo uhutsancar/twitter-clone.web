@@ -1,0 +1,13 @@
+import Logo from "./logo";
+import Menu from "./menu";
+
+export default function SideBar() {
+    return (
+        <aside className="w-[275px]  min-h-screen px-2">
+            <div>
+                 <Logo />
+                   <Menu/>
+            </div>
+        </aside>
+    )
+}
