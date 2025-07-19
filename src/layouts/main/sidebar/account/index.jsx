@@ -13,7 +13,7 @@ export default function Account() {
   return (
     <div className="mt-auto">
       <Popover className="relative">
-        <PopoverButton className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-left  items-center outline-none">
+        <PopoverButton className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-left  items-center transition-colors outline-none">
           <img
             src={account.avatar}
             className="w-10 h-10 rounded-full "
