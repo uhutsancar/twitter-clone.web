@@ -234,54 +234,6 @@ export const topics = [
 		postCount: 13663
 	},
 
-				{
-		title:'ABD tarihinde gündemde',
-		topic: {
-			type:'economy',
-			value:'Nasdaq100 yeni rekourunu kırdı'
-		},
-		postCount: 30675
-	},
-	{
-		title:'Türkiye tarihinde gündemde',
-		topic: {
-			type:'tag',
-			value:'Borsa'
-		}
-	},
-		{
-		title:'Spor tarihinde gündemde',
-		topic: {
-			type:'query',
-			value:'Galatasaray Victor Osimheni satın aldı '
-		},
-		postCount: 13663
-	},
-
-				{
-		title:'ABD tarihinde gündemde',
-		topic: {
-			type:'economy',
-			value:'Nasdaq100 yeni rekourunu kırdı'
-		},
-		postCount: 30675
-	},
-	{
-		title:'Türkiye tarihinde gündemde',
-		topic: {
-			type:'tag',
-			value:'Borsa'
-		}
-	},
-		{
-		title:'Spor tarihinde gündemde',
-		topic: {
-			type:'query',
-			value:'Galatasaray Victor Osimheni satın aldı '
-		},
-		postCount: 13663
-	},
-
 
 	
 ]

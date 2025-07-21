@@ -15,7 +15,7 @@ export default function Topic({ item }) {
         {item.topic.type == "tag" && "#"} {item.topic.value}
       </div>
       {item?.postCount && (
-        <div className="text-[13px] mt-1   text-[#71767b] leading-4">
+        <div className="text-[13px] mt-1 text-[#71767b] leading-4">
           {numberFormat(item.postCount)} posts
         </div>
       )}
