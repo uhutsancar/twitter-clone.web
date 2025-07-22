@@ -1,25 +1,25 @@
-import {useRef, useState} from "react";
-import {useClickAway} from 'react-use';
+import { useRef, useState } from "react";
+import { useClickAway } from "react-use";
 
 export default function Search() {
   const [query, setquery] = useState("");
-  const [focus, setFocus] = useState(false)
+  const [focus, setFocus] = useState(false);
 
-
-  const ref = useRef()
-	useClickAway(ref, () => {
-		setFocus(false)
-	});
+  const ref = useRef();
+  useClickAway(ref, () => {
+    setFocus(false);
+  });
 
   return (
-    <div 
-    ref={ref} 
-    className="min-h-[32px] h-[53px] mb-3 flex items-center  sticky top-0 bg-black  z-10 ">
-      <label className="h-[43px] rounded-full bg-[#202327] w-full relative group border border-transparent focus-within:bg-black focus-within:border-[#1d9bf0]">
+    <div
+      ref={ref}
+      className="min-h-[32px] h-[53px] mb-3 flex items-center  sticky top-0 bg-[color:var(--background-primary)]  z-10 "
+    >
+      <label className="h-[43px] rounded-full bg-[color:var(--background-third)] w-full relative group border border-transparent focus-within:bg-[color:var(--background-primary)] focus-within:border-[#1d9bf0]">
         <div className="w-[56px] h-full flex items-center justify-center  absolute top-0 left-0  pointer-events-none">
           <svg
             viewBox="0 0 24 24"
-            className="min-w-[32px] text-[#71767b] absolute"
+            className="min-w-[32px] text-[color:var(--color-base-secondary)] absolute group-focus-within:tect-[color:var(--color-primary)]"
             height={18.75}
           >
             <path
@@ -31,22 +31,19 @@ export default function Search() {
         <input
           type="text"
           placeholder="Ara"
-          className="w-full h-full  bg-transparent placeholder-[#71767b] rounded-full outline-none pl-[56px] text-[15px]"
+          className="w-full h-full  bg-transparent  rounded-full outline-none pl-[56px] text-[15px]"
           value={query}
           onFocus={() => setFocus(true)}
-          onChange={e => setquery(e.target.value)}
+          onChange={(e) => setquery(e.target.value)}
         />
 
-        { (query && focus ) && (
-          <button 
-          type="button" 
-          onClick={() => setquery('')} 
-          className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black  min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3 invisible group-focus-within:visible ">
-            <svg
-              viewBox="0 0 15 15"
-              height={10}
-              width={10}
-            >
+        {query && focus && (
+          <button
+            type="button"
+            onClick={() => setquery("")}
+            className="w-[22px] h-[22px] rounded-full bg-[color:var(--color-primary)] flex items-center justify-center text-black  min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3 invisible group-focus-within:visible "
+          >
+            <svg viewBox="0 0 15 15" height={10} width={10}>
               <path
                 fill="currentColor"
                 d="M6.09 7.5L.04 1.46 1.46.04 7.5 6.09 13.54.04l1.42 1.42L8.91 7.5l6.05 6.04-1.42 1.42L7.5 8.91l-6.04 6.05-1.42-1.42L6.09 7.5z"
@@ -55,14 +52,13 @@ export default function Search() {
           </button>
         )}
       </label>
-         {focus && (
-            <div
-					className="absolute w-[350px] top-full  -left-px -translate-y-1 bg-black shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]">
-					<p className="p-3 pt-5 text-[#71767b] leading-5">
-						Kişileri, listeleri veya anahtar kelimeleri aramayı dene
-					</p>
-				</div>
-        )}
+      {focus && (
+        <div className="absolute w-[350px] top-full  -left-px -translate-y-1 bg-[color:var(--background-primary)] shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]">
+          <p className="p-3 pt-5 text-[color:var(--color-base-secondary)] leading-5">
+            Kişileri, listeleri veya anahtar kelimeleri aramayı dene
+          </p>
+        </div>
+      )}
     </div>
   );
 }
