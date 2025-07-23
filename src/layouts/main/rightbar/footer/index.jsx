@@ -37,25 +37,25 @@ export default function Footer() {
           <PopoverPanel className="w-[9.375rem] max-w-[24rem] bg-[color:var(--background-primary)] shadow-box rounded-xl absolute bottom-0 right-0 grid overflow-hidden">
             <Link
               to="/"
-              className="py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors text-[15px]  text-white "
+              className="py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors  text-white "
             >
               Hakkında
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors text-[15px]  text-white"
+              className="py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors  text-white"
             >
               Durum
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors text-[15px]  text-white"
+              className="py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors  text-white"
             >
               İşletmeler İçin X
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors text-[15px]  text-white"
+              className="py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors  text-white"
             >
               Geliştiriciler
             </Link>

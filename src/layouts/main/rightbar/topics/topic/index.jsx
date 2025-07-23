@@ -9,20 +9,22 @@ export default function Topic({ item }) {
       to="/"
       className="py-3 px-4  transition-colors hover:bg-white/[0.03]  relative"
     >
-      <div className="text-[13px] text-[color:var(--color-base-secondary)] leading-4">{item.title}</div>
+      <div className="text-[0.813rem] text-[color:var(--color-base-secondary)] leading-4">
+        {item.title}
+      </div>
 
-      <div className="text-[15px] font-bold leading-5 mt-0.5">
+      <div className="font-bold leading-5 mt-0.5">
         {item.topic.type == "tag" && "#"} {item.topic.value}
       </div>
       {item?.postCount && (
-        <div className="text-[13px] mt-1 text-[color:var(--color-base-secondary)] leading-4">
+        <div className="text-[0.813rem] mt-1 text-[color:var(--color-base-secondary)] leading-4">
           {numberFormat(item.postCount)} posts
         </div>
       )}
 
       <Popover className="absolute top-1.5 right-2">
         <PopoverButton className="w-[34.75px] h-[34.75px] rounded-full absolute top-1.5 right-2  flex items-center justify-center hover:bg-[#1d9bf01a] hover:text-[#1d9bf0] transition-colors text-[color:var(--color-base-secondary)] ">
-          <svg viewBox="0 0 24 24" className="" width={18.75} height={18.75}>
+          <svg viewBox="0 0 24 24" className="h-[1.172rem]">
             <path
               fill="currentColor"
               d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
