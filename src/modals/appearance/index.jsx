@@ -40,6 +40,8 @@ export default function AppearanceModal({ close }) {
           <div className="border border-[color:var(--background-third)] px-4 flex py-3 gap-3 rounded-2xl">
             <img
               src="https://pbs.twimg.com/profile_images/1683899100922511378/5lY42eHs_x96.jpg"
+              width={40}
+              height={40}
               alt=""
               className="w-10 h-10 rounded-full object-cover"
             />
@@ -93,6 +95,7 @@ export default function AppearanceModal({ close }) {
                     <button
                       key={index}
                       type="button"
+                      aria-label="font"
                       onClick={() => {
                         setFontSize(fs);
                       }}
@@ -136,6 +139,7 @@ export default function AppearanceModal({ close }) {
                   }}
                   style={{ "--bg": c.primary }}
                   className="w-[40px] h-[40px] rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
+                  aria-label="color"
                 >
                   {color.primary === c.primary && (
                     <svg viewBox="0 0 24 24" width={25}>
@@ -156,6 +160,7 @@ export default function AppearanceModal({ close }) {
             </h6>
             <div className="py-2 px-4 mb-3 grid gap-2 grid-cols-3 bg-[color:var(--background-secondary)] rounded-2xl">
               <button
+                 aria-label="light"
                 onClick={() => {
                   setColor({
                     ...color,
@@ -204,6 +209,7 @@ export default function AppearanceModal({ close }) {
                 <div className="truncate">Varsayılan</div>
               </button>
               <button
+                 aria-label="dark"
                 onClick={() => {
                   setColor({
                     ...color,
@@ -252,6 +258,7 @@ export default function AppearanceModal({ close }) {
                 <div className="truncate">Loş</div>
               </button>
               <button
+                 aria-label="darker"
                 onClick={() => {
                   setColor({
                     ...color,

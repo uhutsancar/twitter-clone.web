@@ -8,6 +8,7 @@ export default function Item({ children, id }) {
   return (
     <button
       type="button"
+      aria-label="active"
       onClick={() => {
         setActive(id);
       }}

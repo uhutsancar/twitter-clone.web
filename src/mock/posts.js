@@ -1,12 +1,49 @@
 export const posts = [
   {
     id: "1708632465282150796",
-    content: `React 18'deki yeni özellikler gerçekten harika! Concurrent rendering ile performans ciddi anlamda artıyor. useTransition hook'unu kullananlar varmı deneyimlerinizi paylaşır mısınız? 🚀`,
+    type: "poll",
+    content: `React vs Vue hangisini tercih ediyorsunuz?
+Bu anket yazılım geliştirme dersi esnasında sorulmuştur.`,
+    poll: {
+      voted: false,
+      votes: 12,
+      answers: [
+        {
+          id: 1,
+          text: "React",
+          votes: 8,
+        },
+        {
+          id: 2,
+          text: "Vue",
+          votes: 1,
+        },
+        {
+          id: 3,
+          text: "Angular",
+          votes: 3,
+        },
+      ],
+    },
+    account: {
+      avatar:
+        "https://pbs.twimg.com/profile_images/1539231037443670016/g9TpobmZ_400x400.jpg",
+      username: "uhutsancar",
+      fullName: "Uhut Sancar",
+    },
+    stats: {
+      comments: 43535,
+      repost: 3434,
+      like: 96946,
+      view: 903453,
+    },
+  },
+  {
+    id: "1708632465282150796",
+    type: "photo",
+    content: `Yeni projemde TypeScript kullanmaya başladım. Tip güvenliği gerçekten işleri kolaylaştırıyor! 🚀 #TypeScript #WebDevelopment`,
     photos: [
-      "https://pbs.twimg.com/media/F7VBIvaW0AIZyiX?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvZXEAAIpEM?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvaW0AAyXEr?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvaWAAAWUsx?format=jpg&name=large",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
     ],
     account: {
       avatar:
@@ -23,15 +60,17 @@ export const posts = [
   },
   {
     id: "1708632465282150796",
-    content: `Imagination Land!`,
+    type: "photo",
+    content: `Node.js ile backend geliştirmenin keyfi başka! Express.js ile API yazmak artık çok daha kolay.`,
     photos: [
-      "https://pbs.twimg.com/media/F7ZIK8KWgAAP8pH?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
     ],
     account: {
       avatar:
-        "https://pbs.twimg.com/profile_images/1683325380441128960/yRsRRjGO_400x400.jpg",
-      username: "elonmusk",
-      fullName: "Elon Musk",
+        "https://pbs.twimg.com/profile_images/1539231037443670016/g9TpobmZ_400x400.jpg",
+      username: "uhutsancar",
+      fullName: "Uhut Sancar",
       verified: true,
     },
     stats: {
@@ -43,15 +82,11 @@ export const posts = [
   },
   {
     id: "1708704613141270652",
-    content: `JavaScript'te async/await kullanırken yaşadığım 5 büyük hata ve çözümleri:
+    content: `JavaScript'te async/await kullanımı Promise'lerden çok daha temiz kod yazmanızı sağlıyor.
 
-1. Promise.all() yerine sıralı await kullanmak
-2. Error handling'i unutmak
-3. Loop içinde await kullanırken dikkat etmemek
-4. Promise constructor anti-pattern
-5. Async function'ları return etmeyi unutmak
+İşte 10 pratik örnek:
 
-Thread'de detayları var 👇`,
+(7. örnek favorim)`,
     account: {
       avatar:
         "https://pbs.twimg.com/profile_images/1539231037443670016/g9TpobmZ_400x400.jpg",
@@ -68,19 +103,12 @@ Thread'de detayları var 👇`,
   },
   {
     id: "1708810187170087410",
-    content: `TypeScript 5.2 ile gelen yeni özellikler:
-
-✅ using declarations (resource management)
-✅ Decorator metadata API
-✅ Named and anonymous tuple elements
-✅ Easier method usage for unions of arrays
-
-Bu özelliklerden hangisini en çok merak ediyorsunuz? 🤔`,
+    type: "photo",
+    content: `CSS Grid ve Flexbox kombinasyonu ile responsive design yapmak artık çok daha kolay. Modern web geliştirmenin temel taşları! 💻`,
     photos: [
-      "https://pbs.twimg.com/media/F7bpqaKXkAAopDd?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F7bptMoXYAA7TpB?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F7bptn2XkAAuPFn?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F7bpua1WEAAwz7C?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
     ],
     account: {
       avatar:
@@ -97,16 +125,17 @@ Bu özelliklerden hangisini en çok merak ediyorsunuz? 🤔`,
   },
   {
     id: "1708707876628476134",
-    content: `Node.js 20'nin performans iyileştirmeleri inanılmaz! 
+    type: "photo",
+    content: `Python'da machine learning projeleri geliştirmenin keyfini çıkarıyorum.
 
-🚀 V8 11.3 ile %20 daha hızla çalışıyor
-🔧 Built-in test runner artık stable
-⚡ Fetch API artık stable
-🛡️ Permissions model experimental olarak geldi
+Pandas ve NumPy ile veri analizi yapmak gerçekten büyüleyici.
 
-Projelerinizi güncellediniz mi? Performans farkını hissettiniz mi?`,
+Bu thread'de örnek kodlar paylaşacağım:`,
     photos: [
-      "https://pbs.twimg.com/media/F7aKxHhaAAAnHlS?format=jpg&name=large",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/Gwo3ztAXEAEpQWr?format=jpg&name=900x900",
     ],
     account: {
       avatar:

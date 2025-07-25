@@ -1,54 +1,34 @@
-import { createBrowserRouter } from "react-router-dom";
+// src/routes.jsx
+import { lazy, Suspense } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+import MainLayout from '~/layouts/main';
 
-import Explore from "~/pages/explore";
-import Notification from "~/pages/notifications";
-import NotFound from "~/pages/not-found";
-import MainLayout from "~/layouts/main";
-import Home from "~/pages/home";
+// Reusable wrapper
+const withSuspense = (Component) => <Suspense fallback={<div>Loading...</div>}><Component /></Suspense>;
 
-import Profile from "~/pages/profile";
-import Bookmarks from "~/pages/bookmarks";
-
-import Messages from "~/pages/message";
-import Lists from "~/pages/lists";
+// Lazy loaded pages
+const Home = lazy(() => import('~/pages/home'));
+const Explore = lazy(() => import('~/pages/explore'));
+const Notification = lazy(() => import('~/pages/notifications'));
+const Profile = lazy(() => import('~/pages/profile'));
+const Bookmarks = lazy(() => import('~/pages/bookmarks'));
+const Messages = lazy(() => import('~/pages/message'));
+const Lists = lazy(() => import('~/pages/lists'));
+const NotFound = lazy(() => import('~/pages/not-found'));
 
 const routes = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <MainLayout />,
     children: [
-     {
-        index:true,
-        element:  <Home />   
-     },
-      {
-        path: "explore",
-        element: <Explore />,
-      },
-      {
-        path: "notification",
-        element: <Notification />,
-      },
-       {
-        path: ":sluq",
-        element: <Profile />,
-      },
-        {
-        path: "/bookmarks",
-        element: <Bookmarks />,
-      },
-           {
-        path: "/messages",
-        element: <Messages/>,
-      },
-           {
-        path: "/lists",
-        element: <Lists />,
-      },
-      {
-        path: "*",
-        element: <NotFound />,
-      },
+      { index: true, element: withSuspense(Home) },
+      { path: 'explore', element: withSuspense(Explore) },
+      { path: 'notification', element: withSuspense(Notification) },
+      { path: 'bookmarks', element: withSuspense(Bookmarks) },
+      { path: 'messages', element: withSuspense(Messages) },
+      { path: 'lists', element: withSuspense(Lists) },
+      { path: ':sluq', element: withSuspense(Profile) }, // Dynamic route
+      { path: '*', element: withSuspense(NotFound) },    // 404 fallback
     ],
   },
 ]);

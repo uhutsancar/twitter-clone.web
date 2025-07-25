@@ -35,6 +35,7 @@ export default function Topic({ item }) {
         <PopoverPanel className="w-[24rem] rounded-xl grid absolute top-2 overflow-hidden right-0 bg-[color:var(--background-primary)] shadow-box z-[2]">
           <button
             type="button"
+            aria-label=" ilgimi çekmiyor"
             className="hover:bg-white/[0.05] transition-colors text-left py-3 px-4 flex items-center gap-3 leading-5 font-bold"
           >
             <svg viewBox="0 0 24 24" className="h-[1.172rem] " width={18.75}>
@@ -47,6 +48,7 @@ export default function Topic({ item }) {
           </button>
           <button
             type="button"
+            aria-label="zararlı"
             className="hover:bg-white/[0.05] transition-colors text-left py-3 px-4 flex items-center gap-3 leading-5 font-bold"
           >
             <svg viewBox="0 0 24 24" className="h-[1.172rem]">

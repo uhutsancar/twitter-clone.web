@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { numberFormat } from "~/utils/format";
-
+import Photo from "./photo";
+import Poll from "./poll";
 
 export default function Post({ post }) {
   return (
@@ -8,11 +9,17 @@ export default function Post({ post }) {
       <img
         src={post.account.avatar}
         className="w-10 h-10 rounded-full object-cover"
-        alt=""
+        width={40}
+        height={40}
+        alt="avatar"
       />
       <div className="flex-1">
         <header className="leading-5 flex items-center gap-2 mb-0.5">
-          <a href="#" className="hover:underline flex items-center font-bold">
+          <a
+            href="#"
+            className="hover:underline flex items-center font-bold"
+            aria-label="fullName"
+          >
             {post.account.fullName}
             {post.account?.verified && (
               <svg
@@ -33,8 +40,14 @@ export default function Post({ post }) {
           </div>
         </header>
         <div>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: post.content.replace(/\n/g, "<br>"),
+            }}
+          />
 
-        <div style={{ whiteSpace: 'pre-wrap' }}>{post.content}</div>
+          {post.type === "photo" && <Photo photos={post.photos} />}
+          {post.type === "poll" && <Poll poll={post.poll} />}
 
           <div className="flex -ml-1.5 mt-1.5">
             <div className="flex-1 group flex items-center gap-px">
@@ -101,7 +114,6 @@ export default function Post({ post }) {
                 />
               </svg>
             </div>
-
           </div>
         </div>
       </div>

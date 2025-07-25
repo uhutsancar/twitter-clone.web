@@ -28,7 +28,7 @@ export default function More() {
       </PopoverButton>
 
       <PopoverPanel className="w-[318px] absolute bottom-0 left-0 bg-[color:var(--background-primary)] shadow-box rounded-xl overflow-hidden">
-        <button className="px-4  h-14 w-full transition-colors inline-flex items-center gap-5  hover:bg-[color:var(--background-secondary)]">
+        <button aria-label="liste" className="px-4  h-14 w-full transition-colors inline-flex items-center gap-5  hover:bg-[color:var(--background-secondary)]">
           <div className="w-[1.641rem] h-[1.641rem] relative">
             <svg viewBox="0 0 24 24" className="h-[1.641rem]">
               <path
@@ -40,7 +40,7 @@ export default function More() {
           <div className="pr-4 text-xl font-bold ">Liste</div>
         </button>
 
-        <button className="px-4 h-14 w-full transition-colors inline-flex items-center gap-5   hover:bg-[color:var(--background-secondary)]">
+        <button aria-label="premium" className="px-4 h-14 w-full transition-colors inline-flex items-center gap-5   hover:bg-[color:var(--background-secondary)]">
           <div className="w-[1.641rem] h-[1.641rem] relative">
             <svg viewBox="0 0 24 24" className="h-[1.641rem]">
               <path
@@ -52,7 +52,7 @@ export default function More() {
           <div className="pr-4 text-xl font-bold ">Premium</div>
         </button>
 
-        <button className="px-4 h-14 w-full transition-colors inline-flex items-center gap-5   hover:bg-[color:var(--background-secondary)]]">
+        <button aria-label="para kazanma" className="px-4 h-14 w-full transition-colors inline-flex items-center gap-5   hover:bg-[color:var(--background-secondary)]]">
           <div className="w-[1.641rem] h-[1.641rem] relative">
             <svg viewBox="0 0 24 24" className="h-[1.641rem]">
               <path
@@ -190,7 +190,8 @@ export default function More() {
 
                 <button
                   onClick={() => setModal("appearance")}
-                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium  w-full transition-colors  hover:bg-[color:var(--background-secondary)] "
+                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium  w-full transition-colors  hover:bg-[color:var(--background-secondary)]"
+                  aria-label="görünüm"
                 >
                   <svg viewBox="0 0 24 24" className="h-[1.172rem]">
                     <path

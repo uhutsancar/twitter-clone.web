@@ -230,6 +230,46 @@ export const topics = [
     },
     postCount: 13663,
   },
+    {
+    title: "Spor tarihinde gündemde",
+    topic: {
+      type: "query",
+      value: "Galatasaray Victor Osimheni satın aldı ",
+    },
+    postCount: 13663,
+  },
+    {
+    title: "Spor tarihinde gündemde",
+    topic: {
+      type: "query",
+      value: "Galatasaray Victor Osimheni satın aldı ",
+    },
+    postCount: 13663,
+  },
+    {
+    title: "Spor tarihinde gündemde",
+    topic: {
+      type: "query",
+      value: "Galatasaray Victor Osimheni satın aldı ",
+    },
+    postCount: 13663,
+  },
+    {
+    title: "Spor tarihinde gündemde",
+    topic: {
+      type: "query",
+      value: "Galatasaray Victor Osimheni satın aldı ",
+    },
+    postCount: 13663,
+  },
+    {
+    title: "Spor tarihinde gündemde",
+    topic: {
+      type: "query",
+      value: "Galatasaray Victor Osimheni satın aldı ",
+    },
+    postCount: 13663,
+  },
 ];
 
 export const colors = [

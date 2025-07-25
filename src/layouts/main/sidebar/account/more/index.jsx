@@ -20,6 +20,7 @@ export default function More({ close }) {
         <button
           key={account.id}
           type="button"
+          aria-label="currentAccount"
           disabled={currentAccount.id === account.id}
           onClick={() => handleAccountChange(account)}
           className={classNames(
@@ -32,6 +33,8 @@ export default function More({ close }) {
           <img
             src={account.avatar}
             className="w-10 h-10 rounded-full"
+            width={40}
+            height={40}
             alt="profile_avatar"
           />
           <div className="mx-3 flex-1 text-[15px]">
@@ -54,13 +57,13 @@ export default function More({ close }) {
       ))}
       <div className="h-px bg-[#2f3336] my-3"></div>
 
-      <button className="py-3 px-4 text-left transition-colors hover:bg-[color:var(--background-secondary)] w-full font-bold leading-[1.25rem]">
+      <button aria-label="hesap ekle" className="py-3 px-4 text-left transition-colors hover:bg-[color:var(--background-secondary)] w-full font-bold leading-[1.25rem]">
         Var olan bir hesap ekle
       </button>
-      <button className="py-3 px-4 text-left transition-colors hover:bg-[color:var(--background-secondary)] w-full font-bold leading-[1.25rem]">
+      <button aria-label="hesapları yönet" className="py-3 px-4 text-left transition-colors hover:bg-[color:var(--background-secondary)] w-full font-bold leading-[1.25rem]">
         Hesapları yönet
       </button>
-      <button className="py-3 px-4 text-left transition-colors hover:bg-[color:var(--background-secondary)] w-full font-bold leading-[1.25rem]">
+      <button aria-label="çıkış yap" className="py-3 px-4 text-left transition-colors hover:bg-[color:var(--background-secondary)] w-full font-bold leading-[1.25rem]">
         <div className="max-w-[228px]">
           @{currentAccount.username} hesabından çıkış yap
         </div>

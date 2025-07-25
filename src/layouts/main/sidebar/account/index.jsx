@@ -16,7 +16,9 @@ export default function Account() {
         <PopoverButton className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-left  items-center transition-colors outline-none">
           <img
             src={account.avatar}
-            className="w-10 h-10 rounded-full "
+            className="w-10 h-10 rounded-full"
+            width={40}
+            height={40}
             alt="profie_avatar"
           />
           <div className="mx-3">

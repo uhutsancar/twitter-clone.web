@@ -10,7 +10,9 @@ export default function UserCard({ user }) {
     <div className="py-3 px-4 flex gap-3 transition-colors hover:bg-white/[0.03] cursor-pointer">
       <img
         src={user.avatar}
-        className="w-10 h-10 rounded-full object-cover "
+        className="w-10 h-10 rounded-full object-cover"
+        width={40}
+        height={40}
         alt=""
       />
       <div className="flex-1 max-w-full flex flex-col text-left">
